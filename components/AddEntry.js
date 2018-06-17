@@ -46,7 +46,7 @@ slide = (metric, value) => {
 
 decrement = (metric) => {
     this.setState((state) => {
-        const count = state[metric] - getMetaInfo(metric).step
+        const count = state[metric] - getMetricMetaInfo(metric).step
 
         return {
             ...state,
