@@ -7,7 +7,7 @@ import DateHeader from './DateHeader'
 import { timeToString } from '../utils/helpers'
 import { Ionicons } from '@expo/vector-icons'
 import TextButton from './TextButton'
-
+import { submitEntry, removeEntry } from '../utils/api'
 
 function SubmitBtn ({ onPress }) {
     return (
@@ -73,8 +73,8 @@ submit = () => {
 
     // Navigate to HJome
 
-    // Save to 'Db'
-
+    submitEntry({ key, entry })
+    
     // Clear the local notification
 }
 
@@ -85,7 +85,7 @@ submit = () => {
 
         // Route to HJome
 
-        //Update 'DB'
+        removeEntry(key);
     }
 
     render() {
