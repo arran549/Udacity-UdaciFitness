@@ -1,15 +1,9 @@
 import React from 'react'
 import AddEntry from './components/AddEntry'
-
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableHighlight,
-  TouchableNativeFeedback,
-  TouchableOpacity,
-  TouchableWithoutFeedback
-}  from 'react-native'
+import { View } from 'react-native'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducer from './reducers'
 
 export default class App extends React.Component {
 
@@ -21,9 +15,11 @@ export default class App extends React.Component {
 
 
     return (
-      <View style={styles.container} >
-        <AddEntry />
-      </View>
+      <Provider store={createStore(reducer)}>
+        <View style={styles.container} >
+          <AddEntry />
+        </View>
+      </Provider>
     );
   }
 }
