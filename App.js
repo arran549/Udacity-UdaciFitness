@@ -22,17 +22,6 @@ export default class App extends React.Component {
 
     return (
       <View style={styles.container} >
-        <TouchableHighlight style={styles.btn} onPress={this.handlePress} underlayColor='#d4271b'>
-          <Text style={styles.btnText}>Touchable Highlight</Text>
-        </TouchableHighlight>
-        <TouchableOpacity style={styles.btn}>
-          <Text style={styles.btnText}>Touchable Opacity</Text>
-        </TouchableOpacity>
-        <TouchableWithoutFeedback  onPress={this.handlePress}>
-          <View style={styles.btn}>
-            <Text style={styles.btnText}>Touchable without feedback</Text>
-          </View>
-        </TouchableWithoutFeedback>
         <AddEntry />
       </View>
     );
