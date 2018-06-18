@@ -1,7 +1,17 @@
 import React from 'react';
-import { View, Slider, Text } from 'react-native'
+import { View, Slider, Text, StyleSheet } from 'react-native'
+
+const styles = StyleSheet.create({
+    displayUnits: {
+        flex: 1,
+        flexDirection: 'row'
+    }
+})
 
 export default function UdaciSlider ({ max, unit, step, value, onChange }) {
+
+
+
     return (
         <View>
             <Slider
@@ -20,32 +30,3 @@ export default function UdaciSlider ({ max, unit, step, value, onChange }) {
 }
 
 
-// export default class UdaciSlider extends Component {
-//     state = {
-//         value: 0
-//     }
-
-//     render() {
-//         return (
-//             <View style={styles.container}>
-//                 <Slider
-//                     minimumValue={-10}
-//                     maximumValue={10}
-//                     step={1}
-//                     value={this.state.value}
-//                     onValueChange={(value) => this.setState(() => ({ value }))}
-//                 />
-//             </View>
-//         )
-//     }
-// }
-
-// const styles = StyleSheet.create({
-//     container: {
-//         flex: 1,
-//         marginLeft: 10,
-//         marginRight: 10,
-//         alignItems: "stretch",
-//         justifyContent: "center"
-//     }
-// })

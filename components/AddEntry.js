@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Platform, StyleSheet } from 'react-native'
 import { getMetricMetaInfo } from '../utils/helpers'
 import UdaciSlider from './UdaciSlider'
 import UdaciSteppers from './UdaciSteppers'
@@ -141,6 +141,12 @@ submit = () => {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    activity: {
+        flexDirection: 'row'
+    }
+})
 
 function mapStateToProps (state) {
     const key = timeToString()

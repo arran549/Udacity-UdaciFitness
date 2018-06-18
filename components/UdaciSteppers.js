@@ -1,8 +1,15 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { FontAwesome, Entupo } from '@expo/vector-icons'
 
 export default function UdaciSteppers ({ max, unit, step, value, onIncrement, onDecrement }) {
+
+    const styles = StyleSheet.create({
+        buttons: {
+            flexDirection: 'row'
+        }
+    })
+
     return (
         <View>
             <View>
@@ -20,3 +27,4 @@ export default function UdaciSteppers ({ max, unit, step, value, onIncrement, on
         </View>
     )
 }
+

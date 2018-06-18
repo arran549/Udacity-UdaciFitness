@@ -18,7 +18,7 @@ export default class App extends React.Component {
 
     return (
       <Provider store={this.store}>
-        <View style={styles.container} >
+        <View style={{flex: 1}} >
           <AddEntry />
         </View>
       </Provider>
@@ -26,22 +26,3 @@ export default class App extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  btn: {
-    backgroundColor: '#E53224',
-    padding: 10,
-    paddingLeft: 50,
-    paddingRight: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5
-  },
-  btnText: {
-    color: '#fff'
-  }
-});
