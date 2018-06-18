@@ -1,5 +1,5 @@
 import { RECEIVE_ENTRIES, ADD_ENTRY } from '../actions'
-import { randomBytes } from 'crypto';
+
 
 function entries (state = {}, action) {
     switch (action.type) {
@@ -17,3 +17,5 @@ function entries (state = {}, action) {
             return state
     }
 }
+
+export default entries;
